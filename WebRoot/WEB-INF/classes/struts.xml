@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<package name="structsBean" extends="struts-default" namespace="/">
+		<action name="login" class="action.loginAction" method="login">
+			<result name="fail">/index.jsp</result>
+			<result name="student" >/student/studentMain.jsp</result>
+			<result name="teacher" >/teacher/teacherMain.jsp</result>
+			<result name="admin" >/inform/adminMain.jsp</result>
+		</action>
+		<action name="informfind" class="action.informationAction" method="informfind">
+			<result name="fail">/index.jsp</result>
+			<result name="success">/inform/information.jsp</result>
+		</action>
+		<action name="informadd" class="action.informationAction" method="informadd">
+			<result name="fail">/index.jsp</result>
+			<result name="success" type="redirect">informfind</result>
+		</action>
+		<action name="informdelete" class="action.informationAction" method="informdelete">
+			<result name="fail">/index.jsp</result>
+			<result name="success" type="redirect">informfind</result>
+		</action>
+		<action name="informupdata" class="action.informationAction" method="informupdata">
+			<result name="fail">/index.jsp</result>
+			<result name="success" type="redirect">informfind</result>
+		</action>
+		
+
+<action name="informupdataview" class="action.informationAction" method="informupdataview">
+			<result name="fail">/index.jsp</result>
+			<result name="success" >/inform/informupdata.jsp</result>
+		</action>
+		
+		
+		<action name="Teacherfind" class="action.teacherAction" method="Teacherfind">
+			<result name="fail">/index.jsp</result>
+			<result name="success">/inform/teacher.jsp</result>
+		</action>
+		<action name="Teacheradd" class="action.teacherAction" method="Teacheradd">
+			<result name="fail">/index.jsp</result>
+			<result name="success" type="redirect">Teacherfind</result>
+		</action>
+		<action name="Teacherdelete" class="action.teacherAction" method="Teacherdelete">
+			<result name="fail">/index.jsp</result>
+			<result name="success" type="redirect">Teacherfind</result>
+		</action>
+		<action name="Teacherupdata" class="action.teacherAction" method="Teacherupdata">
+			<result name="fail">/index.jsp</result>
+			<result name="success" type="redirect">Teacherfind</result>
+		</action>
+		
+		
+		
+		<action name="lessonfind" class="action.lessonAction" method="lessonfind">
+		
+			<result name="success">/inform/lesson.jsp</result>
+			<result name="selectlesson">/student/selectlesson.jsp</result>
+			<result name="teacherlesson">/teacher/teacherlesson.jsp</result>
+		</action>
+		<action name="lessonadd" class="action.lessonAction" method="lessonadd">
+			<result name="fail">/index.jsp</result>
+			<result name="success" >/inform/lessonaddok.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+		<action name="scorefind" class="action.scoreAction" method="scorefind">
+			
+			<result name="success">/student/studentscore.jsp</result>
+			<result name="teacher">/teacher/teacherscore.jsp</result>
+		</action>
+		<action name="scoreadd" class="action.scoreAction" method="scoreadd">
+			<result name="fail">/index.jsp</result>
+			<result name="success">/student/studentMain.jsp</result>
+		</action>
+		<action name="scoreupdata" class="action.scoreAction" method="scoreupdata">
+			<result name="fail">/index.jsp</result>
+			<result name="success">/teacher/scoreupdateok.jsp</result>
+		</action>
+		<action name="scoreupdata1" class="action.scoreAction" method="scoreupdata1">
+			<result name="fail">/index.jsp</result>
+			<result name="success">/teacher/takescore.jsp</result>
+		</action>
+		
+		
+		
+		
+
+	
+	</package>
+</struts>    
